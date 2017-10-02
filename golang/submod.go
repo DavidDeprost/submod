@@ -122,7 +122,6 @@ func name_output(inputfile string, seconds float64) string {
 // 00:00:03.802 --> 00:00:05.314
 // Etc.
 func convert_vtt(inputfile string, outputfile string, seconds float64) int {
-
 	input, err := os.Open(inputfile)
 	if err != nil {
 		log.Fatal(err)
@@ -210,7 +209,6 @@ func convert_vtt(inputfile string, outputfile string, seconds float64) int {
 // 00:00:03.802 --> 00:00:05,314
 // Etc.
 func convert_srt(inputfile string, outputfile string, seconds float64) int {
-
 	input, err := os.Open(inputfile)
 	if err != nil {
 		log.Fatal(err)

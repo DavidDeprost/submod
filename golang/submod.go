@@ -50,7 +50,7 @@ func main() {
 // the name of the new file is identical to the old one, but prepended with "{+x.xx_Sec}_".
 //
 // However, if the file has already been processed by submod before, we simply change
-// the 'increment number' x, instead of prepending "{+x.xx_Sec}_ a second time.
+// the 'increment number' x, instead of prepending "{+x.xx_Sec}_" a second time.
 // This way we can conveniently process files multiple times, and still have sensible names.
 func name_output(inputfile string, seconds float64) string {
 	// Regex to check if the inputfile was previously processed by submod:
@@ -202,11 +202,11 @@ func convert_vtt(inputfile string, outputfile string, seconds float64) int {
 // Example .srt (Note: ',' for decimal spaces):
 //
 // 1
-// 00:00:00.243 --> 00:00:02,110
+// 00:00:00,243 --> 00:00:02,110
 // Previously on ...
 //
 // 2
-// 00:00:03.802 --> 00:00:05,314
+// 00:00:03,802 --> 00:00:05,314
 // Etc.
 func convert_srt(inputfile string, outputfile string, seconds float64) int {
 	input, err := os.Open(inputfile)

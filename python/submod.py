@@ -159,11 +159,11 @@ def convert_srt(inputfile, outputfile, seconds):
     Example .srt (Note: ',' for decimal spaces):
     
     1
-    00:00:00.243 --> 00:00:02,110
+    00:00:00,243 --> 00:00:02,110
     Previously on ...
     
     2
-    00:00:03.802 --> 00:00:05,314
+    00:00:03,802 --> 00:00:05,314
     Etc.
     
     """

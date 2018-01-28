@@ -112,7 +112,7 @@ def convert_vtt(inputfile, outputfile, seconds):
     skip = False
     
     with open(inputfile, 'r') as input, open(outputfile, 'w') as output:
-        # Compile regex to find time-line outside of loop for performance!
+        # Compile regex to find time-line:
         time_line = re.compile('\d\d:\d\d:\d\d\.\d\d\d')
         
         for line in input:
@@ -133,7 +133,7 @@ def convert_vtt(inputfile, outputfile, seconds):
                         skip = False
                     continue
                 
-                # All other lines are simply copied:    
+                # All other lines are simply copied:
                 else:
                     new_line = line
 
